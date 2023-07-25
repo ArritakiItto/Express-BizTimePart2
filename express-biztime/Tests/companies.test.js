@@ -11,12 +11,14 @@ describe('GET /companies', () => {
 
 describe('POST /companies', () => {
   it('creates a new company and responds with the new company object', async () => {
-    const newCompany = { name: 'apple', description: 'Maker of OSX' };
+    const newCompany = { name: 'NewCompany', description: 'Company Test' };
     const response = await request(app).post('/companies').send(newCompany);
-    expect(response.statusCode).toBe(500);
+    expect(response.statusCode).toBe(201);
     expect(response.body).toHaveProperty('company');
     expect(response.body.company).toMatchObject(newCompany);
   });
 });
+
+
 
 //jest --coverage
