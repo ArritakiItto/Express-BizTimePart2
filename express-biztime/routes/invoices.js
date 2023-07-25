@@ -66,7 +66,7 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-//PUT/invoices/[id]
+
 //PUT/invoices/[id]
 router.put("/:id", async function (req, res, next) {
   try {
