@@ -15,7 +15,7 @@ router.get('/', async (req, res, next) => {
 //GET/invoices/[id]
 router.get('/:id', async (req, res, next) => {
   try {
-    const { id } = req.params;
+    const  id  = req.params;
     const result = await db.query(
       `SELECT i.id, 
               i.comp_code, 
